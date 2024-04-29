@@ -68,24 +68,24 @@ func Open(path string, mode DBMode) (*DB, error) {
 // the configuration in 'config'.
 //
 // If 'path' is nil, use the location specified:
-//  - in the environment variable $NOTMUCH_DATABASE, if non-empty
-//  - in a configuration file, located as described in 'config'
-//  - by $XDG_DATA_HOME/notmuch/<profile>, if profile argument is set
+//   - in the environment variable $NOTMUCH_DATABASE, if non-empty
+//   - in a configuration file, located as described in 'config'
+//   - by $XDG_DATA_HOME/notmuch/<profile>, if profile argument is set
 //
 // If 'path' is non-nil, but does not appear to be a Xapian database, check
 // for a directory '.notmuch/xapian' below 'path'.
 //
 // If 'config' is nil, it will look:
-//  - the environment variable $NOTMUCH_CONFIG, if non-empty
-//  - $XDG_CONFIG_HOME/notmuch
-//  - $HOME/.notmuch-config
+//   - the environment variable $NOTMUCH_CONFIG, if non-empty
+//   - $XDG_CONFIG_HOME/notmuch
+//   - $HOME/.notmuch-config
 //
 // If 'config' is an empty string (""), then it will not open any configuration
 // file.
 //
 // If 'profile' is nil, it will use:
-//	 - the environment variable $NOTMUCH_PROFILE if defined
-//   - otherwise 'default' for directories, and '' for paths
+//   - the environment variable $NOTMUCH_PROFILE if defined
+//   - otherwise 'default' for directories, and ” for paths
 //
 // If 'profile' is non-nil, append to the directory / file path determined
 // for 'config' and 'path'.

@@ -8,7 +8,7 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/zenhack/go.notmuch"
+	notmuch "github.com/nvedant/go.notmuch"
 )
 
 var (
